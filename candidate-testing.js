@@ -79,10 +79,10 @@ for(let i = 0; i< 5; i++){
   console.log(`Correct Answer: ${correctAnswers[i]}`);
   console.log();
 }
-  let grade;
+  let grade = input.candidateAnswers * 20;
   
 
-  return grade;
+  return grade 80.00 (if input.candidateAnswers = correctAnswer ;
 }
 
 function runProgram() {
