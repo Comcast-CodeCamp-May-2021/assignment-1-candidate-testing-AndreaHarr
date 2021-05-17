@@ -21,8 +21,8 @@ let correctAnswers = [
   "Trajectory ",
   "3"];
 let candidateAnswers = [];
-
-
+let numberOfCorrectAnswers = 0
+let totalNumberOfQuestions = questions.length
 function askForName() {
   candidateName = input.question ("What is your name? ");
   // TODO 1.1b: Ask for candidate's name //
@@ -70,7 +70,10 @@ function gradeQuiz(candidateAnswers) {
 
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // ;
-for(let i = 0; i< 5; i++){
+for(let i = 0; i< question.length; i++){
+  if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()){
+    numberOfCorrectAnswers === numberOfCorrectAnswers + 1
+  }
   // 1) Who was the first American woman in space?
   // Your Answer: sally ride
   // Correct Answer: Sally Ride
@@ -79,10 +82,15 @@ for(let i = 0; i< 5; i++){
   console.log(`Correct Answer: ${correctAnswers[i]}`);
   console.log();
 }
-  let grade = input.candidateAnswers * 20;
+  let grade = (numberOfCorrectAnswers / totalNumberOfQuestions * 100);
+  console.log(`>>>Overall Grade:${grade} % (${numberOfCorrectAnswers} of${ totalQuestions} Responses correct)<<<`)
   
-
-  return grade 80.00 (if input.candidateAnswers = correctAnswer ;
+if(grade > 80%) {
+  console.log(>>> Status: PASS <<<)
+} else{
+  console.log(>>> Status: FAILED <<<)
+}
+  return grade;
 }
 
 function runProgram() {
